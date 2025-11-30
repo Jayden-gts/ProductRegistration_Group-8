@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jyRF77nu6aU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jghat\\Source\\Repos\\ProductRegistration_Group-8\\ProductRegistration_Group8\\ProductRegistration_Group8.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jghat\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.10\\microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
+    "C:\\Users\\jghat\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

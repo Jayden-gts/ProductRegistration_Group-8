@@ -1,3 +1,7 @@
+
+using Microsoft.EntityFrameworkCore;
+using ProductRegistration_Group_8.Models;
+
 namespace ProductRegistration_Group_8;
 
 public class Program
@@ -6,31 +10,49 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
+
+
         builder.Services.AddControllersWithViews();
-        
+
+
+        builder.Services.AddDbContext<ProductContext>(options =>
+            options.UseSqlite("Data Source=Product.db"));
+
         builder.Services.AddHttpClient("api", client =>
         {
-            client.BaseAddress = new Uri("http://localhost:5000"); // this will be replaced with John API 
+            client.BaseAddress = new Uri("http://localhost:5000"); // optional, for MVC HttpClient
         });
-        
+
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
+
         var app = builder.Build();
 
 
-        // Configure the HTTP request pipeline.
-        if (!app.Environment.IsDevelopment())
+
+        // enables Swagger in development
+        if (app.Environment.IsDevelopment())
+        {
+          
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+        else   // Configure the HTTP request pipeline.
         {
             app.UseExceptionHandler("/Home/Error");
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
 
-        app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
         app.UseRouting();
 
         app.UseAuthorization();
 
         app.MapStaticAssets();
+
+        app.MapControllers();
+
         app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
