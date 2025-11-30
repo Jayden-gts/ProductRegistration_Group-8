@@ -8,8 +8,14 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
-
+        
+        builder.Services.AddHttpClient("api", client =>
+        {
+            client.BaseAddress = new Uri("http://localhost:5000"); // this will be replaced with John API 
+        });
+        
         var app = builder.Build();
+
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())

@@ -1,0 +1,14 @@
+@model ProductRegistration_Group_8.Models.Category
+
+<h2>Patch Category Name</h2>
+
+<form asp-action="Patch" method="post">
+    <input type="hidden" asp-for="CategoryId"/>
+    <div class="form-group">
+        <label>New Name</label>
+        <input name="name" type="text" class="form-control" value="@Model.Name"/>
+    </div>
+    <button type="submit" class="btn btn-warning">Update Name</button>
+</form>
+
+<a asp-action="Index">Back to List</a>

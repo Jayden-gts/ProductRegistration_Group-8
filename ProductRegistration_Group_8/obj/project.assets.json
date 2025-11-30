@@ -3111,19 +3111,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/jaydenseto/.nuget/packages/": {}
+    "/Users/laibaahmed/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jaydenseto/PROG30000/ProductRegistration_Group_8/ProductRegistration_Group_8/ProductRegistration_Group_8.csproj",
+      "projectUniqueName": "/Users/laibaahmed/RiderProjects/ProductRegistration_Group-8/ProductRegistration_Group_8/ProductRegistration_Group_8.csproj",
       "projectName": "ProductRegistration_Group_8",
-      "projectPath": "/Users/jaydenseto/PROG30000/ProductRegistration_Group_8/ProductRegistration_Group_8/ProductRegistration_Group_8.csproj",
-      "packagesPath": "/Users/jaydenseto/.nuget/packages/",
-      "outputPath": "/Users/jaydenseto/PROG30000/ProductRegistration_Group_8/ProductRegistration_Group_8/obj/",
+      "projectPath": "/Users/laibaahmed/RiderProjects/ProductRegistration_Group-8/ProductRegistration_Group_8/ProductRegistration_Group_8.csproj",
+      "packagesPath": "/Users/laibaahmed/.nuget/packages/",
+      "outputPath": "/Users/laibaahmed/RiderProjects/ProductRegistration_Group-8/ProductRegistration_Group_8/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jaydenseto/.nuget/NuGet/NuGet.Config"
+        "/Users/laibaahmed/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -3190,7 +3190,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

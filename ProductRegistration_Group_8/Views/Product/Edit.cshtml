@@ -1,0 +1,22 @@
+@model ProductRegistration_Group_8.Models.Product
+
+<h2>Edit Product</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ProductId"/>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="CategoryId">Category ID</label>
+        <input asp-for="CategoryId" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<a asp-action="Index">Back to List</a>
