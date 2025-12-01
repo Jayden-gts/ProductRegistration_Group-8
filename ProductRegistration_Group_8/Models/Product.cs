@@ -22,5 +22,5 @@ public partial class Product
     [Display(Name = "Category")]
     public int CategoryId { get; set; }
 
-    public virtual Category Category { get; set; } = null!;
+    public virtual Category? Category { get; set; } = null!;
 }
