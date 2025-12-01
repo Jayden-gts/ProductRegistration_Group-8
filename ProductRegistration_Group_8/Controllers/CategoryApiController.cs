@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductRegistration_Group_8.Models;
 
-[Route("api/[controller]")]
+[Route("api/category")]
 [ApiController]
-public class CategoryController : ControllerBase
+public class CategoryApiController : ControllerBase
 {
     private readonly ProductContext _context;
 
-    public CategoryController(ProductContext context)
+    public CategoryApiController(ProductContext context)
     {
         _context = context;
     }

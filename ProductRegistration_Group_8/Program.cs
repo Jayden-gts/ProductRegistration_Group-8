@@ -20,7 +20,7 @@ public class Program
 
         builder.Services.AddHttpClient("api", client =>
         {
-            client.BaseAddress = new Uri("http://localhost:5000"); // optional, for MVC HttpClient
+            client.BaseAddress = new Uri("http://localhost:7124/"); 
         });
 
         builder.Services.AddEndpointsApiExplorer();

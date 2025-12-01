@@ -4,11 +4,11 @@ using ProductRegistration_Group_8.Models;
 
 [Route("api/product")]
 [ApiController]
-public class ProductController : ControllerBase
+public class ProductApiController : ControllerBase
 {
     private readonly ProductContext _context;
 
-    public ProductController(ProductContext context)
+    public ProductApiController(ProductContext context)
     {
         _context = context;
     }
