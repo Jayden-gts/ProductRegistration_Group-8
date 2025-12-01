@@ -429,6 +429,7 @@ C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Grou
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\ProductRegistration_Group_8.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\ProductRegistration_Group_8.pdb
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Humanizer.dll
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.Build.Locator.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
@@ -444,10 +445,15 @@ C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Grou
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\SQLitePCLRaw.core.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\System.Composition.AttributedModel.dll
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\System.Composition.Convention.dll
@@ -546,6 +552,7 @@ C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Grou
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.AssemblyInfoInputs.cache
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.AssemblyInfo.cs
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.csproj.CoreCompileInputs.cache
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.RazorAssemblyInfo.cache
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.RazorAssemblyInfo.cs
@@ -618,8 +625,8 @@ C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Grou
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\compressed\6faal8y24l-9vr69e8ynj.gz
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\compressed\cf44h4gezq-87fc7y1x7t.gz
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\compressed\4a2f7dyja6-mlv21k5csn.gz
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\compressed\edokp3g79h-3tivac3o42.gz
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\compressed\03ijqwgyor-3tivac3o42.gz
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\compressed\edokp3g79h-4kb669pvlb.gz
+C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\compressed\03ijqwgyor-4kb669pvlb.gz
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\staticwebassets.development.json
@@ -631,10 +638,3 @@ C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Grou
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.pdb
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.genruntimeconfig.cache
 C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ref\ProductRegistration_Group_8.dll
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Microsoft.OpenApi.dll
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Newtonsoft.Json.dll
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\jghat\Source\Repos\ProductRegistration_Group-8\ProductRegistration_Group_8\obj\Debug\net9.0\ProductRegistration_Group_8.MvcApplicationPartsAssemblyInfo.cs

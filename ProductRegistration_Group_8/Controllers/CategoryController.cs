@@ -1,29 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProductRegistration_Group_8.Models;
-using System.Net.Http.Json;
 
 namespace ProductRegistration_Group_8.Controllers;
 
 public class CategoryController : Controller
 {
-    private readonly HttpClient _client;
+    private readonly ProductContext _context;
 
-    public CategoryController(IHttpClientFactory factory)
+    public CategoryController(ProductContext context)
     {
-        _client = factory.CreateClient("api");
+        _context = context;
     }
 
     public async Task<IActionResult> Index()
     {
-        //var categories = await _client.GetFromJsonAsync<List<Category>>("Category");
-        //return View(categories);
-        return View(new List<Category>());
-
+        var categories = await _context.Categories
+                                       .Include(c => c.Products) 
+                                       .ToListAsync();
+        return View(categories);
     }
 
     public async Task<IActionResult> Details(int id)
     {
-        var category = await _client.GetFromJsonAsync<Category>($"Category/{id}");
+        var category = await _context.Categories
+                                     .Include(c => c.Products)
+                                     .FirstOrDefaultAsync(c => c.CategoryId == id);
         if (category == null) return NotFound();
         return View(category);
     }
@@ -35,16 +37,15 @@ public class CategoryController : Controller
     {
         if (!ModelState.IsValid) return View(category);
 
-        var response = await _client.PostAsJsonAsync("Category", category);
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        _context.Categories.Add(category);
+        await _context.SaveChangesAsync();
 
-        ModelState.AddModelError("", "Failed to create category");
-        return View(category);
+        return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> Edit(int id)
     {
-        var category = await _client.GetFromJsonAsync<Category>($"Category/{id}");
+        var category = await _context.Categories.FindAsync(id);
         if (category == null) return NotFound();
         return View(category);
     }
@@ -53,17 +54,17 @@ public class CategoryController : Controller
     public async Task<IActionResult> Edit(int id, Category category)
     {
         if (!ModelState.IsValid) return View(category);
+        if (id != category.CategoryId) return BadRequest();
 
-        var response = await _client.PutAsJsonAsync($"Category/{id}", category);
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        _context.Entry(category).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
 
-        ModelState.AddModelError("", "Failed to update category");
-        return View(category);
+        return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> Patch(int id)
     {
-        var category = await _client.GetFromJsonAsync<Category>($"Category/{id}");
+        var category = await _context.Categories.FindAsync(id);
         if (category == null) return NotFound();
         return View(category);
     }
@@ -71,19 +72,18 @@ public class CategoryController : Controller
     [HttpPost]
     public async Task<IActionResult> Patch(int id, string name)
     {
-        var patchObj = new { Name = name };
-        var response = await _client.PatchAsJsonAsync($"Category/{id}", patchObj);
+        var category = await _context.Categories.FindAsync(id);
+        if (category == null) return NotFound();
 
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        category.Name = name;
+        await _context.SaveChangesAsync();
 
-        ModelState.AddModelError("", "Failed to patch category");
-        var category = await _client.GetFromJsonAsync<Category>($"Category/{id}");
-        return View(category);
+        return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> Delete(int id)
     {
-        var category = await _client.GetFromJsonAsync<Category>($"Category/{id}");
+        var category = await _context.Categories.FindAsync(id);
         if (category == null) return NotFound();
         return View(category);
     }
@@ -91,11 +91,12 @@ public class CategoryController : Controller
     [HttpPost, ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        var response = await _client.DeleteAsync($"Category/{id}");
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        var category = await _context.Categories.FindAsync(id);
+        if (category == null) return NotFound();
 
-        ModelState.AddModelError("", "Failed to delete category");
-        var category = await _client.GetFromJsonAsync<Category>($"Category/{id}");
-        return View(category);
+        _context.Categories.Remove(category);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index");
     }
 }

@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Category": {
+    "/api/category": {
       "get": {
         "tags": [
-          "Category"
+          "CategoryApi"
         ],
         "responses": {
           "200": {
@@ -18,7 +18,7 @@
       },
       "post": {
         "tags": [
-          "Category"
+          "CategoryApi"
         ],
         "requestBody": {
           "content": {
@@ -46,10 +46,10 @@
         }
       }
     },
-    "/api/Category/{id}": {
+    "/api/category/{id}": {
       "get": {
         "tags": [
-          "Category"
+          "CategoryApi"
         ],
         "parameters": [
           {
@@ -70,7 +70,7 @@
       },
       "put": {
         "tags": [
-          "Category"
+          "CategoryApi"
         ],
         "parameters": [
           {
@@ -110,7 +110,7 @@
       },
       "patch": {
         "tags": [
-          "Category"
+          "CategoryApi"
         ],
         "parameters": [
           {
@@ -150,7 +150,7 @@
       },
       "delete": {
         "tags": [
-          "Category"
+          "CategoryApi"
         ],
         "parameters": [
           {
@@ -173,7 +173,7 @@
     "/api/product": {
       "get": {
         "tags": [
-          "Product"
+          "ProductApi"
         ],
         "responses": {
           "200": {
@@ -183,7 +183,7 @@
       },
       "post": {
         "tags": [
-          "Product"
+          "ProductApi"
         ],
         "requestBody": {
           "content": {
@@ -214,7 +214,7 @@
     "/api/product/{id}": {
       "get": {
         "tags": [
-          "Product"
+          "ProductApi"
         ],
         "parameters": [
           {
@@ -235,7 +235,7 @@
       },
       "put": {
         "tags": [
-          "Product"
+          "ProductApi"
         ],
         "parameters": [
           {
@@ -275,7 +275,7 @@
       },
       "patch": {
         "tags": [
-          "Product"
+          "ProductApi"
         ],
         "parameters": [
           {
@@ -318,7 +318,7 @@
       },
       "delete": {
         "tags": [
-          "Product"
+          "ProductApi"
         ],
         "parameters": [
           {
@@ -403,10 +403,10 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "CategoryApi"
     },
     {
-      "name": "Product"
+      "name": "ProductApi"
     }
   ]
 }

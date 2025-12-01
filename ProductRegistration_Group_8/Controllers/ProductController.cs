@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProductRegistration_Group_8.Models;
 using System.Net.Http.Json;
 
@@ -7,23 +8,28 @@ namespace ProductRegistration_Group_8.Controllers;
 public class ProductController : Controller
 {
     private readonly HttpClient _client;
+    private readonly ProductContext _context;
 
-    public ProductController(IHttpClientFactory factory)
+    public ProductController(IHttpClientFactory factory, ProductContext context)
     {
         _client = factory.CreateClient("api");
+        _context = context;
     }
 
     public async Task<IActionResult> Index()
     {
-        //var products = await _client.GetFromJsonAsync<List<Product>>("Product");
-        //return View(products);
-        return View(new List<Product>());
+        var products = await _context.Products.ToListAsync();
+        return View(products);
+        //return View(new List<Product>());
 
     }
 
     public async Task<IActionResult> Details(int id)
     {
-        var product = await _client.GetFromJsonAsync<Product>($"Product/{id}");
+        var product = await _context.Products
+                                 .Include(p => p.Category) 
+                                 .FirstOrDefaultAsync(p => p.ProductId == id);
+
         if (product == null) return NotFound();
         return View(product);
     }
@@ -35,16 +41,15 @@ public class ProductController : Controller
     {
         if (!ModelState.IsValid) return View(product);
 
-        var response = await _client.PostAsJsonAsync("Product", product);
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        _context.Products.Add(product);
+        await _context.SaveChangesAsync();
 
-        ModelState.AddModelError("", "Failed to create product");
-        return View(product);
+        return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> Edit(int id)
     {
-        var product = await _client.GetFromJsonAsync<Product>($"Product/{id}");
+        var product = await _context.Products.FindAsync(id);
         if (product == null) return NotFound();
         return View(product);
     }
@@ -54,16 +59,17 @@ public class ProductController : Controller
     {
         if (!ModelState.IsValid) return View(product);
 
-        var response = await _client.PutAsJsonAsync($"Product/{id}", product);
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        if (id != product.ProductId) return BadRequest();
 
-        ModelState.AddModelError("", "Failed to update product");
-        return View(product);
+        _context.Entry(product).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> Patch(int id)
     {
-        var product = await _client.GetFromJsonAsync<Product>($"Product/{id}");
+        var product = await _context.Products.FindAsync(id);
         if (product == null) return NotFound();
         return View(product);
     }
@@ -71,19 +77,18 @@ public class ProductController : Controller
     [HttpPost]
     public async Task<IActionResult> Patch(int id, double price)
     {
-        var patchObj = new { Price = price };
-        var response = await _client.PatchAsJsonAsync($"Product/{id}", patchObj);
+        var product = await _context.Products.FindAsync(id);
+        if (product == null) return NotFound();
 
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        product.Price = price;
+        await _context.SaveChangesAsync();
 
-        ModelState.AddModelError("", "Failed to patch product");
-        var product = await _client.GetFromJsonAsync<Product>($"Product/{id}");
-        return View(product);
+        return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> Delete(int id)
     {
-        var product = await _client.GetFromJsonAsync<Product>($"Product/{id}");
+        var product = await _context.Products.FindAsync(id);
         if (product == null) return NotFound();
         return View(product);
     }
@@ -91,11 +96,11 @@ public class ProductController : Controller
     [HttpPost, ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        var response = await _client.DeleteAsync($"Product/{id}");
-        if (response.IsSuccessStatusCode) return RedirectToAction("Index");
+        var product = await _context.Products.FindAsync(id);
+        if (product == null) return NotFound();
 
-        ModelState.AddModelError("", "Failed to delete product");
-        var product = await _client.GetFromJsonAsync<Product>($"Product/{id}");
-        return View(product);
+        _context.Products.Remove(product);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Index");
     }
 }

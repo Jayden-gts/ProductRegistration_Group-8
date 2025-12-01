@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "CategoryController",
+    "ContainingType": "CategoryApiController",
     "Method": "GetAll",
-    "RelativePath": "api/Category",
+    "RelativePath": "api/category",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,9 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CategoryController",
+    "ContainingType": "CategoryApiController",
     "Method": "Create",
-    "RelativePath": "api/Category",
+    "RelativePath": "api/category",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CategoryController",
+    "ContainingType": "CategoryApiController",
     "Method": "Get",
-    "RelativePath": "api/Category/{id}",
+    "RelativePath": "api/category/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CategoryController",
+    "ContainingType": "CategoryApiController",
     "Method": "Update",
-    "RelativePath": "api/Category/{id}",
+    "RelativePath": "api/category/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -63,9 +63,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CategoryController",
+    "ContainingType": "CategoryApiController",
     "Method": "Patch",
-    "RelativePath": "api/Category/{id}",
+    "RelativePath": "api/category/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -84,9 +84,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CategoryController",
+    "ContainingType": "CategoryApiController",
     "Method": "Delete",
-    "RelativePath": "api/Category/{id}",
+    "RelativePath": "api/category/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -100,7 +100,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductController",
+    "ContainingType": "ProductApiController",
     "Method": "GetProducts",
     "RelativePath": "api/product",
     "HttpMethod": "GET",
@@ -110,7 +110,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductController",
+    "ContainingType": "ProductApiController",
     "Method": "CreateProduct",
     "RelativePath": "api/product",
     "HttpMethod": "POST",
@@ -126,7 +126,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductController",
+    "ContainingType": "ProductApiController",
     "Method": "GetProduct",
     "RelativePath": "api/product/{id}",
     "HttpMethod": "GET",
@@ -142,7 +142,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductController",
+    "ContainingType": "ProductApiController",
     "Method": "UpdateProduct",
     "RelativePath": "api/product/{id}",
     "HttpMethod": "PUT",
@@ -163,7 +163,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductController",
+    "ContainingType": "ProductApiController",
     "Method": "PatchProduct",
     "RelativePath": "api/product/{id}",
     "HttpMethod": "PATCH",
@@ -184,7 +184,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProductController",
+    "ContainingType": "ProductApiController",
     "Method": "DeleteProduct",
     "RelativePath": "api/product/{id}",
     "HttpMethod": "DELETE",
