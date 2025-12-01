@@ -2,6 +2,8 @@
 
 <h2>Delete Category</h2>
 
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
 <div>
     <p>Are you sure you want to delete <strong>@Model.Name</strong>?</p>
 </div>
@@ -10,4 +12,6 @@
     <input type="hidden" asp-for="CategoryId"/>
     <button type="submit" class="btn btn-danger">Delete</button>
     <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    
+
 </form>

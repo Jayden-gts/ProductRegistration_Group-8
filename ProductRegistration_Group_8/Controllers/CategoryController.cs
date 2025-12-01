@@ -91,9 +91,17 @@ public class CategoryController : Controller
     [HttpPost, ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
-        var category = await _context.Categories.FindAsync(id);
+        var category = await _context.Categories
+            .Include(c => c.Products)
+            .FirstOrDefaultAsync(c => c.CategoryId == id);
         if (category == null) return NotFound();
 
+        if (category.Products.Any())
+        {
+            ModelState.AddModelError("", "Cannot delete category because it has associated products.");
+            return View(category);
+        }
+        
         _context.Categories.Remove(category);
         await _context.SaveChangesAsync();
 
